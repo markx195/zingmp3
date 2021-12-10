@@ -1134,17 +1134,6 @@ button, optgroup, select {
     cursor: auto;
 }
 
-.media {
-    align-items: center;
-    display: flex;
-    text-align: left;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 .media-left {
     margin-right: 10px;
 }
@@ -1477,7 +1466,7 @@ main.zm-section {
 }
 
 .playlist-header {
-    display: block;
+    display: block !important;
     width: 300px;
     float: left;
 }
@@ -1654,37 +1643,6 @@ figure {
     color: #fff;
 }
 
-.playlist-header .media-content {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-    width: 100%;
-}
-
-.playlist-header .media-content {
-    display: flex;
-    flex-direction: column;
-    align-self: normal;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.media-content {
-    flex-basis: auto;
-    flex-grow: 1;
-    flex-shrink: 1;
-    text-align: left;
-    align-self: center;
-    width: 0;
-}
-
-.playlist-header .media-content .content-top {
-    text-align: center;
-}
-
-.playlist-header .media-content .content-top {
-    width: 100%;
-}
-
 .playlist-header .media-content .content-top .title {
     white-space: normal;
 }
@@ -1724,6 +1682,7 @@ figure {
 .playlist-header .media-content .actions {
     display: flex;
     justify-content: center;
+    padding-left: 51px;
 }
 
 .playlist-header .media-content .actions .btn-play-all {
