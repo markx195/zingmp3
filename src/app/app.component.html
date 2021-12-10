@@ -1,0 +1,17 @@
+<div class="root">
+  <div class="zm-section zm-layout has-player">
+    <aside class="zm-sidebar">
+      <app-sidebar></app-sidebar>
+    </aside>
+    <div class=zm-header is-sticky>
+      <app-header></app-header>
+    </div>
+    <div class="zm-box zm-mainpage">
+      <!-- <app-box-mainpage></app-box-mainpage> -->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="zm-section now-playing-bar">
+      <app-listplay></app-listplay>
+    </div>
+  </div>
+</div>

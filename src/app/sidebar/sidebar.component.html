@@ -1,0 +1,122 @@
+    <div class="zm-sidebar-wrapper">
+      <nav class="zm-navbar">
+        <div class="zm-navbar-brand">
+          <div class="zm-navbar-item">
+            <button class="zm-btn button">
+              <div class="zm3-logo" [routerLink]="['/']" routerLinkActive="router-link-active"></div>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <nav class="zm-navbar zm-navbar-main">
+        <ul class="zm-navbar-menu">
+          <li class="zm-navbar-item">
+            <a title="Cá Nhân">
+              <i class="material-icons">library_music</i>
+              <span> Cá Nhân</span>
+            </a>
+          </li>
+          <li class="zm-navbar-item">
+            <a title="Khám Phá ">
+              <i class="material-icons">album</i>
+              <span> Khám Phá </span>
+            </a>
+          </li>
+          <li class="zm-navbar-item">
+            <a title=" Zing Chart ">
+              <i class="material-icons">insights</i>
+              <span> Zing Chart </span>
+            </a>
+          </li>
+          <li class="zm-navbar-item">
+            <a title="Radio ">
+              <i class="material-icons">radio</i>
+              <span> Radio </span>
+            </a>
+          </li>
+          <li class="zm-navbar-item">
+            <a title=" Theo Dõi ">
+              <i class="material-icons">bookmark</i>
+              <span> Theo Dõi </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-divide"></div>
+      <div style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+        <div class="zm-sidebar-scrollbar"
+          style="position: absolute; inset: 0px; overflow: hidden scroll; margin-right: -6px; margin-bottom: 0px;">
+          <nav class="zm-navbar zm-navbar-main mar-t-5 mar-b-0">
+            <ul class="zm-navbar-menu">
+              <li class="zm-navbar-item">
+                <a title="Nhạc Mới">
+                  <i class="material-icons">headphones</i>
+                  <span> Nhạc Mới </span>
+                </a>
+              </li>
+              <li class="zm-navbar-item">
+                <a title="Thể Loại ">
+                  <i class="material-icons">art_track</i>
+                  <span> Thể Loại </span>
+                </a>
+              </li>
+              <li class="zm-navbar-item">
+                <a title=" Top 100 ">
+                  <i class="material-icons">star_border</i>
+                  <span> Top 100 </span>
+                </a>
+              </li>
+              <li class="zm-navbar-item">
+                <a title="MV">
+                  <i class="material-icons">music_video</i>
+                  <span> MV </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="vip-banner-sidebar">
+            <div class="text"> Nghe nhạc không quảng cáo cùng kho nhạc VIP</div>
+            <a class="zm-btn is-medium is-outlined is-upper button" tabindex="0"
+              href="https://zingmp3.vn/vip?utm_source=desktop&amp;utm_campaign=VIP&amp;utm_medium=sidebar"
+              target="_blank">Nâng cấp VIP</a>
+          </div>
+          <nav class="zm-navbar zm-navbar-my-music pad-t-15">
+            <div class="main-title">Thư Viện
+              <button class="zm-tooltip-btn edit-btn is-hover-circle button" tabindex="0">
+                <i class="material-icons">edit</i>
+              </button>
+            </div>
+            <ul class="zm-navbar-menu library-personal">
+              <li class="zm-navbar-item">
+                <a class href="/mymusic/library/song">
+                  <i class="material-icons"><img
+                      src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg"></i>
+                  <span> Bài Hát</span>
+                </a>
+              </li>
+              <li class="zm-navbar-item">
+                <a class href="/mymusic/library/song">
+                  <i class="material-icons"><img
+                      src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg"
+                      img></i>
+                  <span> PlayList </span>
+                </a>
+              </li>
+              <li class="zm-navbar-item">
+                <a class href="/mymusic/library/song">
+                  <i class="material-icons"><img
+                      src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg"></i>
+                  <span> Gần Đây </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="add-playlist-sidebar">
+        <button class="zm-btn button" tabindex="0" style="bottom: 90px">
+          <i class="material-icons">add</i>
+          <span>Tạo playlist mới</span>
+        </button>
+      </div>
+    </div>
