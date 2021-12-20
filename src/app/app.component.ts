@@ -11,7 +11,8 @@ SwiperCore.use([Pagination, Navigation]);
   encapsulation: ViewEncapsulation.None,
 })
 
-export class AppComponent {
-  title = 'ZingMp3';
+export class AppComponent implements OnInit{
+  ngOnInit(): void {}
+  title = 'Zingmp3';
 }
 

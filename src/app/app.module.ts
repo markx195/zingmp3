@@ -21,7 +21,7 @@ import { DetailComponent } from './detail/detail.component';
     HeaderComponent,
     BoxMainpageComponent,
     ListplayComponent,
-    DetailComponent
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

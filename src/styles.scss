@@ -320,12 +320,6 @@ div {
     color: inherit;
 }
 
-.zm-tooltip-btn .material-icons{
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 50%;
-}
-
 .zm-navbar-my-music .main-title {
     display: flex;
     justify-content: space-between;
@@ -1016,15 +1010,6 @@ main.zm-section>.container {
     margin-left: 5px;
 }
 
-.level-item {
-    align-items: center;
-    display: flex;
-    flex-basis: auto;
-    flex-grow: 0;
-    flex-shrink: 0;
-    justify-content: center;
-}
-
 .player-queue__header .tab-bars .level-item .zm-tooltip-btn {
     color: #fff;
     background-color: hsla(0,0%,100%,0.1);
@@ -1138,12 +1123,6 @@ button, optgroup, select {
     margin-right: 10px;
 }
 
-.media-left, .media-right {
-    flex-basis: auto;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
 .player-controls-left .media-left .thumbnail-wrapper {
     position: relative;
 }
@@ -1161,17 +1140,13 @@ button, optgroup, select {
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    // margin-left: -19px;
 }
 
 .player-controls-left .media-left .thumbnail-wrapper .thumbnail .image {
     width: 64px;
     height: 64px;
     border: 2px solid var(--thumbnail-player);
-}
-
-.is-rounded {
-    overflow: hidden;
-    border-radius: 999px!important;
 }
 
 .is-50x50 {
@@ -1351,11 +1326,6 @@ figure {
     font-size: 16px;
 }
 
-.zm-tooltip-btn .material-cions{
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 50%;
-}
 
 i.material-icons.play {
     font-size: 40px;
@@ -1492,10 +1462,6 @@ main.zm-section {
 
 .playlist-header .media-left {
     margin-right: 20px;
-}
-
-.media-left {
-    margin-right: 10px;
 }
 
 .media-left, .media-right {
@@ -1654,13 +1620,7 @@ figure {
     margin-bottom: 0;
     text-transform: none;
 }
-.media .subtitle, .media .title, .media .title a {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100%;
-    line-height: normal;
-}
+
 .media .title, .media .title a {
     display: inline-block;
 }
@@ -1751,3 +1711,8 @@ figure {
     background-color: hsla(0,0%,100%,0.1);
     margin-right: 10px;
 }
+
+.media-item {
+    border-radius: 4px;
+}
+
