@@ -1,0 +1,48 @@
+<div class="content">
+    <h3 class="title-content">Lựa chọn hôm nay</h3>
+    <div class="music">
+      <div class="music-item" *ngFor="let item of songs; let index = index">
+        <div
+          class="music-item-img"
+          [routerLink]="['/detail']"
+          routerLinkActive="router-link-active"
+        >
+          <div
+            class="music-item-model"
+            [ngStyle]="
+              playMusic == true && currentId == item.id
+                ? {
+                    display: 'flex',
+                    'justify-content': 'space-around',
+                    'align-items': 'center'
+                  }
+                : {}
+            "
+          >
+            <div class="model-icon"><i class="material-icons">thumb_up_alt</i></div>
+            <div class="model-icon" (click)="getMusic(item, $event)" [attr.data-id]="item.id">
+              <i class="material-icons" *ngIf="!playMusic" [attr.data-id]="item.id">play_arrow</i>
+              <div
+                *ngIf="playMusic && currentId == item.id; else elseBlock"
+                class="effects"
+                [attr.data-id]="item.id"
+              >
+                <div class="item" [attr.data-id]="item.id"></div>
+                <div class="item" [attr.data-id]="item.id"></div>
+                <div class="item" [attr.data-id]="item.id"></div>
+                <div class="item" [attr.data-id]="item.id"></div>
+              </div>
+            <ng-template #elseBlock>
+                <i class="material-icons" *ngIf="playMusic" [attr.data-id]="item.id">play_arrow</i>
+            </ng-template>
+            </div>
+            <div class="model-icon"><i class="material-icons">more_horiz</i></div>
+          </div>
+          <!-- <img src="assets/img/img1.webp" alt="" /> -->
+          <img [src]="item.image" alt="" />
+        </div>
+        <h4>Accoustic V-Pop</h4>
+        <p>Rót mật vào tai cùng những thanh âm Acoustic nhẹ nhàng</p>
+      </div>
+    </div>
+</div>

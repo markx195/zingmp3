@@ -1,0 +1,112 @@
+.content{
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+}
+.title-content, .music{
+  padding-left: 50px;
+    padding-right: 50px;
+}
+.title-content{
+  font-size: 25px;
+  font-weight: bold;
+}
+.music{
+    display: flex;
+    justify-content: space-between;
+}
+.music-item{
+    height: auto;
+    width: 180px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.music-item-img img{
+height: 180px;
+width: 100%;
+border-radius: 4px;
+}
+.music-item-img{
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+.music-item-img:hover img{
+  transform: scale(1.2);
+  transition: 0.7s ease-in-out;
+}
+.music-item-img:hover .music-item-model{
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+.music-item-model{
+  height: 180px;
+  width: 180px;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.music-item-model .model-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.music-item-model .model-icon:nth-child(odd){
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgba($color: #ffff, $alpha: 0.2);
+}
+.music-item-model .model-icon:nth-child(even){
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid #ffff;
+}
+.music-item h4{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.music-item p{
+  opacity: 0.7;
+}
+.effects{
+  display: flex;
+  transform: rotate(180deg);
+}
+.item{
+  height: 20px;
+  width: 4px;
+  background: white;
+  margin-left: 2px;
+}
+.item:nth-child(1){
+        animation: equalizer 1s infinite;
+    }
+    .item:nth-child(2){
+        animation: equalizer 3s infinite;
+    }
+    .item:nth-child(3){
+        animation: equalizer 1s infinite;
+    }
+    .item:nth-child(4){
+        animation: equalizer 2s infinite;
+    }
+    @keyframes equalizer  {
+        0% { height: 0; }
+
+  50%{
+      height: 10px;
+  }
+  100% { height: 20px; }
+}
+

@@ -1,0 +1,104 @@
+.rt-chart-home {
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rt-chart-home .bg-alpha {
+    z-index: 0;
+    background-image: linear-gradient(180deg,#740091,#2d1a4c);
+    opacity: .95;
+}
+
+.rt-chart-home .bg-blur {
+    background: url(https://zjs.zadn.vn/zmp3-desktop/releases/v1.4.19/static/media/bg-chart.fd766403.jpg) top/cover no-repeat;
+}
+
+.chartmp3 {
+    height: 400px;
+    width: auto;
+    background-color: #c662ef;
+    color: white;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+  }
+  .chartmp3-title {
+    height: 60px;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .chartmp3-content {
+    height: 340px;
+    width: 100%;
+    display: flex;
+  }
+  .chartmp3-left {
+    width: 35%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .chartmp3-item {
+    height: 80px;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .chartmp3-item:not(:first-child){
+    margin-top: 10px;
+  }
+  .media-left {
+    height: 60px;
+    width: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .media-img{
+    position: relative;
+  }
+  .chartmp3-item:hover{
+    background-color: rgba($color: #ffff, $alpha: 0.4);
+  }
+  .media-img,
+  .media-img img {
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+  }
+  .media-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  .media-infor {
+    padding-left: 10px;
+  }
+  .chartmp3-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .chartmp3-button button {
+    height: auto;
+    width: 120px;
+    border-radius: 20px;
+    background-color: unset;
+    border: 1px solid white;
+    color: white;
+  }
+  .chartmp3-right {
+    width: 65%;
+    height: 100%;
+  }
+  

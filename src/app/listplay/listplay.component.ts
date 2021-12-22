@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck, ViewChild, ElementRef,AfterContentChecked } from '@angular/core';
 import { Observable } from 'rxjs';
 import * as moment from "moment";
 import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+import { ActionMusicService } from '../action-music.service';
+import { ShowServiceService } from '../show-service.service';
 
 @Component({
   selector: 'app-listplay',
   templateUrl: './listplay.component.html',
   styleUrls: ['./listplay.component.scss']
 })
-export class ListplayComponent implements OnInit {
+export class ListplayComponent implements OnInit, DoCheck {
   audioObj = new Audio();
   audioEvents = [
     "ended",
@@ -21,21 +23,17 @@ export class ListplayComponent implements OnInit {
     "loadedmetadata",
     "loadstart"
   ];
+  currentMusic: any;
+  @ViewChild('audio') audio: ElementRef | undefined;
+  progressPercent: any;
+  durationTime: any;
+  pause = false;
+  playMusic = false; //Phát nhạc
+  styleOne = false;
+  animate = 'spin 3s linear infinite';
+  transformMusic = false;
+  constructor(private actionMusic: ActionMusicService) {}
 
-  // files=[
-  //   {
-  //     url: './assets/1.mp3',
-  //     name: 'mySong1'
-  //   },
-  //   {
-  //     url: './assets/2.mp3',
-  //     name: 'mySong2'
-  //   },
-  //   {
-  //     url: './assets/3.mp3',
-  //     name: 'mySong3'
-  //   }
-  // ];
   audioList = [
     {
       url: './assets/1.mp3',
@@ -107,24 +105,45 @@ export class ListplayComponent implements OnInit {
 
   play() { 
     this.audioObj.play();
-    console.log('clickplaybtn');
   }
   stop(){
     this.audioObj.pause();
     this.audioObj.currentTime=0;
-    console.log('clickstopbtn');
   }
-  pause(){
-    this.audioObj.pause();
-    console.log('clickpausebtn');
-  }
-
-  ngOnInit(): void {
-  }
-
+  // pause(){
+  //   this.audioObj.pause();
+  //   console.log('clickpausebtn');
+  // }
   formatTime(time: number, format: string = "mm:ss") {
     const momentTime = time * 1000;
     return moment.utc(momentTime).format(format);
   }
+
+  changeIcon() {
+    this.playMusic = this.actionMusic._playMusic;
+    this.actionMusic._playMusic=!this.actionMusic._playMusic;
+  }
+
+  ngDoCheck(): void {
+    // this.playMusic = this.actionMusic._playMusic;
+    // if (this.playMusic == true) {
+    //   this.animate = 'running';
+    //   this.audio?.nativeElement.play();
+    // } else {
+    //   this.animate = 'paused';
+    //   this.audio?.nativeElement.pause();
+    // }
+  }
+
+  ngOnInit(): void {
+    // this.actionMusic.playMusic$.subscribe((item) => {
+    //   this.currentMusic = item;
+    //   this.audio?.nativeElement.load();
+    //   this.audio?.nativeElement.play();
+    // });
+  }
+
+  
+
 }
 

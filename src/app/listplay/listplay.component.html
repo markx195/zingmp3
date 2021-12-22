@@ -26,7 +26,7 @@
           <div class="content" style="color:#fff;">Khám phá thêm các bài hát mới của Zing MP3
               
             <ul>
-                <li *ngFor="let file of files" (click)="openFile(file.url)">{{file.name}}</li>
+              <li *ngFor="let audio of audioList" (click)="openFile(audio.url)">{{audio.title}}</li>
             </ul>
 
           </div>
@@ -37,10 +37,12 @@
         <div class="queue-scroll"
           style="position: absolute; inset: 0px; overflow: hidden scroll; margin-right: -6px; margin-bottom: 0px;">
           <div class="list player-queue__list">
+
             <div class="list-item media-item full-left">
               <div class="media">
                 <div class="media-left">
-                  <div class="song-thumb">
+
+                  <div class="song-thumb"  (click)="openFile(audioList[0].url)">
                     <figure class="image is-40x40" title="Dạo Này Em Thế Nào">
                       <img src='../../assets/1.jpg' alt="">
                     </figure>
@@ -94,7 +96,8 @@
             <div class="list-item media-item full-left">
               <div class="media">
                 <div class="media-left">
-                  <div class="song-thumb">
+
+                  <div class="song-thumb" (click)="openFile(audioList[1].url)" >
                     <figure class="image is-40x40" title="Dạo Này Em Thế Nào">
                       <img
                         src='../../assets/2.jpg' alt="">
@@ -119,7 +122,7 @@
                   <div class="card-info">
                     <div class="title-wrapper">
                       <span class="item-title title">
-                        <span><span><span>Dạo Này Em Thế Nào</span></span>
+                        <span><span><span>Dạo này </span></span>
                           <span style="position: fixed; visibility: hidden; top: 0px; left: 0px;">…</span></span></span>
                     </div>
                     <h3 class="is-one-line is-truncate subtitle" style="margin-bottom: 0px !important;">
@@ -149,7 +152,8 @@
             <div class="list-item media-item full-left">
               <div class="media">
                 <div class="media-left">
-                  <div class="song-thumb">
+
+                  <div class="song-thumb" (click)="openFile(audioList[2].url)">
                     <figure class="image is-40x40" title="Dạo Này Em Thế Nào">
                       <img src='../../assets/3.jpg' alt="">
                     </figure>
@@ -173,7 +177,7 @@
                   <div class="card-info">
                     <div class="title-wrapper">
                       <span class="item-title title">
-                        <span><span><span>Dạo Này Em Thế Nào</span></span>
+                        <span><span><span> Em Thế Nào</span></span>
                           <span style="position: fixed; visibility: hidden; top: 0px; left: 0px;">…</span></span></span>
                     </div>
                     <h3 class="is-one-line is-truncate subtitle" style="margin-bottom: 0px !important;">
@@ -214,7 +218,7 @@
         <div class="level-item is-narrow">
           <div class="media animate">
             <div class="media-left">
-              <a class="" href="/album/TO-INFINITY-MINO/69CCEU0A.html">
+              <a class="">
                 <div class="thumbnail-wrapper">
                   <div class="thumbnail">
                     <figure class="aloha image is-50x50 is-rounded"><img
@@ -227,12 +231,11 @@
             </div>
             <div class="media-content">
               <div class="is-mark level-left">
-                <div class="song-info-wrapper"><span class="song-title-item"><a class=""
-                      href="/album/TO-INFINITY-MINO/69CCEU0A.html">
+                <div class="song-info-wrapper"><span class="song-title-item"><a class="">
                       <div class="title-wrapper"><span class="item-title title">LOVE IN DA CAR</span></div>
                     </a></span></div>
               </div>
-              <h3 class="is-one-line is-truncate subtitle"><a class="is-ghost" href="/nghe-si/MINO-WINNER">MINO</a>
+              <h3 class="is-one-line is-truncate subtitle"><a class="is-ghost">MINO</a>
               </h3>
             </div>
             <div class="media-right">
@@ -257,10 +260,14 @@
             <button class="zm-btn zm-tooltip-btn btn-pre is-hover-circle button" tabindex="-1" disabled="">
               <i class="material-icons">skip_previous</i>
             </button>
-            <button class="zm-btn zm-tooltip-btn btn-play button" tabindex="0" (click)="pause()">
+            <!-- <button class="zm-btn zm-tooltip-btn btn-play button" tabindex="0" (click)="pause()">
               <i class="material-icons play">play_circle_outline</i>
-            </button>
-            <button class="zm-btn zm-tooltip-btn btn-next is-hover-circle button" tabindex="0" (click)="play()">
+            </button> -->
+                  <button class="zm-btn zm-tooltip-btn btn-play button" tabindex="0" (click)="changeIcon()" (click)="stop()" >
+                  <i  class="material-icons play "*ngIf="!playMusic">play_circle_outline</i>
+                  <i  class="material-icons play "*ngIf="playMusic">pause_circle_outline</i>
+                  </button>
+            <button class="zm-btn zm-tooltip-btn btn-next is-hover-circle button" tabindex="0">
               <i class="material-icons">skip_next</i>
             </button>
             <button class="zm-btn zm-tooltip-btn btn-repeat is-hover-circle button" tabindex="0">

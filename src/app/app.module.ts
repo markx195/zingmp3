@@ -12,6 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { BoxMainpageComponent } from './boxMainpage/box-mainpage.component';
 import { ListplayComponent } from './listplay/listplay.component';
 import { DetailComponent } from './detail/detail.component';
+import { BoxContentComponent } from './box-content/box-content.component';
+import { Chartmp3Component } from './chartmp3/chartmp3.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,8 @@ import { DetailComponent } from './detail/detail.component';
     BoxMainpageComponent,
     ListplayComponent,
     DetailComponent,
+    BoxContentComponent,
+    Chartmp3Component,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,8 @@ import { DetailComponent } from './detail/detail.component';
     BrowserAnimationsModule,
     MatSliderModule,
     SwiperModule,
+    HighchartsChartModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
