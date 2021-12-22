@@ -89,9 +89,6 @@ export class Chartmp3Component implements OnInit {
           '<td style="color: {series.color}">{series.name} </td>' +
           '<td style="text-align: right"><b>{point.y}</b></td></tr>',
         footerFormat: '</table>',
-        // formatter: function () {
-        //   return '<img src="/./assets/img/anh2.jpg" title="" alt="" border="0" height="25" width="25">';
-        // },
       },
 
       series: [
